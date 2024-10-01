@@ -3,22 +3,22 @@ pipeline {
         stages {
             stage ("dev") {
                 steps {
-
+                    sh 'echo this is dev'
                 }
             }
-            stage ("dev") {
+            stage ("qa") {
                 steps {
-                    
+                    sh 'echo this is qa'
                 }
             }
-            stage ("dev") {
+            stage ("uat") {
                 steps {
-                    
+                    sh 'echo this is uat'
                 }
             }
-            stage ("dev") {
+            stage ("prod") {
                 steps {
-                    
+                  sh 'echo this is prod'  
                 }
             }
 
