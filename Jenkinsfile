@@ -2,6 +2,9 @@ pipeline {
     agent  {
         label 'Agent-01'
     } 
+    options {
+        timeout (time: 1, units:'SECONDS')
+    }
         stages {
             stage ("dev") {
                 steps {
@@ -11,6 +14,7 @@ pipeline {
             stage ("qa") {
                 steps {
                     sh 'echo this is qa'
+                    sh 'sleep 10'
                 }
             }
             stage ("uat") {
