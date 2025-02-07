@@ -6,25 +6,20 @@ pipeline {
         timeout (time: 1, units:'SECONDS')
     }
         stages {
-            stage ("dev") {
+            stage ("build") {
                 steps {
-                    sh 'echo this is dev'
+                    sh 'echo this is build'
                 }
             }
-            stage ("qa") {
+            stage ("test") {
                 steps {
-                    sh 'echo this is qa'
+                    sh 'echo this is test'
                     sh 'sleep 10'
                 }
             }
-            stage ("uat") {
+            stage ("Deploy") {
                 steps {
-                    sh 'echo this is uat'
-                }
-            }
-            stage ("prod") {
-                steps {
-                  sh 'echo this is prod'  
+                    sh 'echo this is uDeployat'
                 }
             }
 
