@@ -1,5 +1,7 @@
 pipeline {   
-    agent any
+    agent {
+         label 'Agent-01'
+    }
       stages {
             stage ("build") {
                 steps {
@@ -9,7 +11,7 @@ pipeline {
             stage ("test") {
                 steps {
                     sh 'echo this is test'
-                    sh 'sleep 10'
+
                 }
             }
             stage ("Deploy") {
