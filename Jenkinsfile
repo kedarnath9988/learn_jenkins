@@ -1,9 +1,5 @@
 pipeline {
-    agent  {
-        label 'Agent-01'
-    } 
-    
-        stages {
+      stages {
             stage ("build") {
                 steps {
                     sh 'echo this is build'
