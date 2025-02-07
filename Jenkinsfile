@@ -16,7 +16,5 @@ pipeline {
                     sh 'echo this is uDeployat'
                 }
             }
-
-
         }
 }
