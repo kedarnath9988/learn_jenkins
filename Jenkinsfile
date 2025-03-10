@@ -62,23 +62,23 @@ pipeline {
             }
         }
         post {
-            always(){
+            always{
                 echo "i will run always"
             }
 
-        success(){
+        success{
             echo " pipeline is successfully compleated"
         }
-        failure(){
+        failure{
             echo "pipeline is failure"
         }
-        changed(){
+        changed{
             echo " pipe line has changed from the Previously build "
         }
-        aborted (){
+        aborted{
             echo "pipe line is manually aborted or stoped "
         }
-        fixed(){
+        fixed{
             echo "currrent pipe-line is successful nut previouslly it is failed "
         }
         }
