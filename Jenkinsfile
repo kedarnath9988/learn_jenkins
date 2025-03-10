@@ -4,7 +4,7 @@ pipeline {
     } //node-01
 
     options {
-        timeout(time:30, units: 'sec' )
+        timeout(time:30, unit: 'sec' )
         disableConcurrentBuilds()
     }
      parameters {
