@@ -7,6 +7,10 @@ pipeline {
         timeout(time:30, unit: 'SECONDS')
         disableConcurrentBuilds()
     }
+    environment{
+        deploy_to = "production"
+        GREEATINGS = "hello"
+    }
      parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
@@ -56,5 +60,26 @@ pipeline {
                 echo "hello .tst "
                 }
             }
+        }
+        post {
+            always(){
+                echo "i will run always"
+            }
+
+        success(){
+            echo " pipeline is successfully compleated"
+        }
+        failure(){
+            echo "pipeline is failure"
+        }
+        changed(){
+            echo " pipe line has changed from the Previously build "
+        }
+        aborted (){
+            echo "pipe line is manually aborted or stoped "
+        }
+        fixed(){
+            echo "currrent pipe-line is successful nut previouslly it is failed "
+        }
         }
 }
