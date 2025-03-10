@@ -50,6 +50,8 @@ pipeline {
                 echo "trigger test "
 
                 echo "one more trigger "
+
+                echo "2nd one more trigger "
                 }
             }
         }
