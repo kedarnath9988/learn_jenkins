@@ -52,6 +52,8 @@ pipeline {
                 echo "one more trigger "
 
                 echo "2nd one more trigger "
+
+                echo "hello .tst "
                 }
             }
         }
