@@ -48,6 +48,8 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
 
                 echo "trigger test "
+
+                echo "one more trigger "
                 }
             }
         }
