@@ -15,8 +15,8 @@ pipeline{
                     steps{
                         sh """
 
-                        cd 01-sg
-                        terraform init -reconfigure 
+                        ls -lrt 
+                        echo this is the init stage 
 
                         """
                     }
