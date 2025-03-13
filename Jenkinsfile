@@ -11,14 +11,15 @@ pipeline{
             choice(name: 'terraform', choices: ['apply', 'destroy'], description: 'you may apply or destroy the resoureces')
         }
         stages {
-                stage('Build'){
+                stage('int'){
                     steps{
                         sh """
-                        ls -ltr 
+                        cd 10-sg
+                        terraform init -reconfigure 
                         """
                     }
                 }
-                stage('test'){
+                stage('plan'){
                         steps{
                             sh """
                                 echo thi is test stage
@@ -27,7 +28,7 @@ pipeline{
 
                 }
 
-                stage('deploy'){
+                stage('apply'){
                             steps{
                                 sh """
                                     echo this is deploy stage 
