@@ -10,6 +10,10 @@ pipeline{
         parameters {
             choice(name: 'terraform', choices: ['apply', 'destroy'], description: 'you may apply or destroy the resoureces')
         }
+         environment {
+                         PATH = "$PATH:/path/to/terraform/bin/directory"
+         }
+
         stages {
                 stage('int'){
                     steps{
