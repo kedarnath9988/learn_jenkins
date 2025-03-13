@@ -18,7 +18,7 @@ pipeline{
                         sh """
 
                         cd 01-sg
-                        ls -ltr  
+                        terraform init -reconfigure 
 
                         """
                     }
