@@ -16,7 +16,7 @@ pipeline{
                         sh """
 
                         ls -lrt 
-                        echo this is the init stage 
+                        terraform init -reconfigure 
 
                         """
                     }
