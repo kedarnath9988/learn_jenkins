@@ -3,9 +3,9 @@ pipeline{
             label 'node-01'
         }
         options {
-                timeout(time:30, unit:'minutes' )
-                disableConcurrentBuilds
-                ansiClours("xterm")
+                timeout(time:30, unit:'MINUTES' )
+                disableConcurrentBuilds()
+                ansiColor('xterm')
         }
         parameters {
             choice(name: 'terraform', choices: ['apply', 'destroy'], description: 'you may apply or destroy the resoureces')
